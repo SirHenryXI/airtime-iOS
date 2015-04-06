@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="AirTime_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-aU-uHc">
+                                <rect key="frame" x="50" y="42" width="220" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="FVb-3P-Uet"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wR-nJ-byC">
+                                <rect key="frame" x="36" y="106" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1tZ-dx-HSp"/>
+                                    <constraint firstAttribute="width" constant="120" id="Z5l-cX-xle"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="LPI-Gx-Vyu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-A8-8FB">
+                                <rect key="frame" x="164" y="106" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="57z-31-ezg"/>
+                                    <constraint firstAttribute="height" constant="44" id="VDS-V8-BBe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="New Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newTimer" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Loz-Zr-oTX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name - Task Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lI8-X4-Y4x">
+                                <rect key="frame" x="20" y="8" width="280" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="cTi-p2-Q3w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3wR-nJ-byC" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="36" id="Tfb-Ik-G85"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="3wR-nJ-byC" secondAttribute="bottom" id="UlU-vW-9dv"/>
+                            <constraint firstAttribute="trailing" secondItem="lI8-X4-Y4x" secondAttribute="trailing" constant="20" id="bt1-Cg-ukj"/>
+                            <constraint firstItem="3Z9-aU-uHc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="42" id="c0c-dB-qf9"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="ZhY-A8-8FB" secondAttribute="bottom" id="dvd-KB-fY6"/>
+                            <constraint firstAttribute="trailing" secondItem="ZhY-A8-8FB" secondAttribute="trailing" constant="36" id="jUX-WB-bsQ"/>
+                            <constraint firstItem="lI8-X4-Y4x" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="lR8-lF-QHm"/>
+                            <constraint firstItem="lI8-X4-Y4x" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="8" id="mcu-Pl-qLi"/>
+                            <constraint firstItem="3Z9-aU-uHc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="34" id="skK-Uw-KlP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Z9-aU-uHc" secondAttribute="trailing" constant="34" id="v6x-X7-lOv"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="3Z9-aU-uHc" id="HqM-fh-L7h"/>
+                        <outlet property="titleLabel" destination="lI8-X4-Y4x" id="FQp-I0-Iww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
